@@ -1,8 +1,8 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:/home/ricks/.gem/ruby/2.6.0/bin:$PATH
+# export PATH=$HOME/bin:/usr/local/bin:/home/ricks/.gem/ruby/2.6.0/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH="/home/ricks/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -68,7 +68,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(fzf git zsh-autosuggestions sudo)
+plugins=(git sudo)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -89,10 +89,6 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
-        source /etc/profile.d/vte.sh
-fi
-
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -103,24 +99,17 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 #export FZF_DEFAULT_COMMAND='fd --type f'
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git --exclude proc --exclude dev --exclude sys'
+#export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+#export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git --exclude proc --exclude dev --exclude sys'
 
 #export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border"'
-export FZF_DEFAULT_OPTS='--exact --height 40% --layout=reverse --border --preview "bat --style=numbers --color=always {} | head -500"'
-export FZF_TMUX=1
-export FZF_TMUX_HEIGHT=50%
-alias fd=fdfind
+#export FZF_DEFAULT_OPTS='--exact --height 40% --layout=reverse --border --preview "bat --style=numbers --color=always {} | head -500"'
+#export FZF_TMUX=1
+#export FZF_TMUX_HEIGHT=50%
+#alias fd=fdfind
 
-alias ll="exa -lahF"
-alias ls="exa -laF"
-alias cat="bat"
-alias find="fzf"
+#alias ll="exa -lahF"
+#alias ls="exa -laF"
+#alias cat="bat"
 alias nano="vim"
-#startnormal() {
-#	startx /home/ricks/.xinitrc
-#}
 
-#startdistfree() {
-#	startx /home/ricks/.xinitdistrc
-#}
